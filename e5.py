@@ -15,7 +15,6 @@ def e5():
                     lcm_factors[p] += 1
                 current_quotient /= p
 
-    print lcm_factors
     lcm = 1
     for k, v in lcm_factors.items():
         lcm *= k ** v

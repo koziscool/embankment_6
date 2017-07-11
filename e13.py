@@ -1,9 +1,9 @@
         
 import time
-from e13digits import digits_array_string
+from string_literals import e13_digits_array_string
 
 def e13():
-    num_array = [ int(s) for s in digits_array_string.strip().split() ]
+    num_array = [ int(s) for s in e13_digits_array_string.strip().split() ]
     return str( sum(num_array) )[:10]
 
 if __name__ == '__main__':
