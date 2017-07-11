@@ -15,6 +15,21 @@ def primes_up_to( limit ):
     primes.pop()
     return primes
 
+def first_n_primes( n ):
+    primes, current_counter = [2], 3
+    while len( primes ) < n:
+        is_prime = True
+        for p in primes:
+            if p*p > current_counter:
+                break
+            if current_counter % p == 0:
+                is_prime = False
+                break
+        if is_prime:
+            primes.append( current_counter )
+        current_counter += 1
+    return primes
+
 def factorize_into_primes( num, primes ):
     factors, primes_index = [], 0
     current_quotient = num
